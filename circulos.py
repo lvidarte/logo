@@ -11,9 +11,11 @@ HEIGHT = 600
 
 def dibujar_circulo(event):
     radio = random.randint(10, 100)
+    x = -(WIDTH/2) + event.x
+    y = (HEIGHT/2) - event.y
 
     turtle.penup()
-    turtle.setpos(-WIDTH/2 + event.x, HEIGHT/2 - event.y)
+    turtle.setpos(x, y)
     turtle.right(90)
     turtle.fd(radio)
     turtle.left(90)

@@ -11,7 +11,7 @@ def estrella(lados, largo, angulo):
 
 if __name__ == '__main__':
 
-    turtle.setup(600, 800)
+    turtle.setup(800, 600)
 
     screen = turtle.Screen()
     screen.title('Estrellas')
@@ -40,11 +40,11 @@ if __name__ == '__main__':
     reset = tk.Button(screen._root, text="Borrar")
     reset.bind('<Button-1>', borrar)
 
-    lados.pack(side=tk.LEFT)
-    largo.pack(side=tk.LEFT)
-    angulo.pack(side=tk.LEFT)
-    boton.pack(side=tk.LEFT)
-    reset.pack(side=tk.LEFT)
+    lados.grid(row=0, column=0)
+    largo.grid(row=0, column=1)
+    angulo.grid(row=0, column=2)
+    boton.grid(row=0, column=3)
+    reset.grid(row=0, column=4)
 
     borrar(None)
     turtle.mainloop()
